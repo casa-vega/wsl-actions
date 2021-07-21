@@ -12,5 +12,6 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      - name: WSL POC
-        run: cat /etc/debian_version
+    - uses: Vampire/setup-wsl@v1
+    - run: |
+          cat /etc/debian_version
